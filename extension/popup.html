@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Hindsight Sync</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <p class="wordmark"><img src="icons/icon.svg" alt="" width="20" height="20" />Hindsight<span>.</span></p>
+      <a id="open-app" href="#" class="quiet">Open ↗</a>
+    </header>
+
+    <section id="status" class="status">
+      <p id="status-message">Not synced yet.</p>
+      <p id="status-detail" class="muted"></p>
+      <div id="progress" class="progress" hidden>
+        <div id="progress-bar"></div>
+      </div>
+    </section>
+
+    <button id="sync" type="button">Sync</button>
+    <p class="muted note">
+      Reads Seeking Alpha from your own logged in session, only what is new
+      since the last sync. Stay logged in to Seeking Alpha in this browser.
+    </p>
+
+    <details id="settings">
+      <summary>Settings</summary>
+      <label>
+        Hindsight address
+        <input
+          id="hindsight-url"
+          type="url"
+          placeholder="http://localhost:3000"
+        />
+      </label>
+      <label>
+        Sync token
+        <input
+          id="sync-token"
+          type="password"
+          placeholder="Only when Hindsight is deployed"
+        />
+      </label>
+      <button id="save" type="button" class="secondary">Save</button>
+      <p id="settings-message" class="muted"></p>
+    </details>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

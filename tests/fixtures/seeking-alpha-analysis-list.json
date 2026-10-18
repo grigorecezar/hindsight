@@ -1,0 +1,154 @@
+{
+  "data": [
+    {
+      "id": "4701001",
+      "type": "article",
+      "attributes": {
+        "publishOn": "2026-09-15T08:30:00-04:00",
+        "title": "Apple: Services Carry The Quarter",
+        "isPaywalled": false
+      },
+      "relationships": {
+        "author": { "data": { "id": "51234", "type": "author" } },
+        "sentiments": { "data": [{ "id": "900001", "type": "sentiment" }] },
+        "primaryTickers": { "data": [{ "id": "146", "type": "tag" }] },
+        "secondaryTickers": { "data": [] }
+      },
+      "links": { "self": "/article/4701001-apple-services-carry-the-quarter" }
+    },
+    {
+      "id": "4700500",
+      "type": "article",
+      "attributes": {
+        "publishOn": "2026-09-10T17:05:00-04:00",
+        "title": "Apple Is Priced For Perfection"
+      },
+      "relationships": {
+        "author": { "data": { "id": "60001", "type": "author" } },
+        "primaryTickers": { "data": [{ "id": "146", "type": "tag" }] }
+      },
+      "links": { "self": "/article/4700500-apple-is-priced-for-perfection" }
+    },
+    {
+      "id": "4700400",
+      "type": "article",
+      "attributes": {
+        "publishOn": "2026-09-08T10:00:00-04:00",
+        "title": "Big Tech Earnings Preview"
+      },
+      "relationships": {
+        "author": { "data": { "id": "51234", "type": "author" } },
+        "sentiments": {
+          "data": [
+            { "id": "900010", "type": "sentiment" },
+            { "id": "900011", "type": "sentiment" }
+          ]
+        },
+        "primaryTickers": {
+          "data": [
+            { "id": "146", "type": "tag" },
+            { "id": "1150", "type": "tag" }
+          ]
+        }
+      }
+    },
+    {
+      "id": "4700300",
+      "type": "article",
+      "attributes": {
+        "publishOn": "2026-09-05T09:00:00-04:00",
+        "title": "Microsoft Wins The Cloud Again"
+      },
+      "relationships": {
+        "author": { "data": { "id": "60001", "type": "author" } },
+        "sentiments": { "data": [{ "id": "900020", "type": "sentiment" }] },
+        "primaryTickers": { "data": [{ "id": "1150", "type": "tag" }] },
+        "secondaryTickers": { "data": [{ "id": "146", "type": "tag" }] }
+      }
+    },
+    {
+      "id": "4700200",
+      "type": "article",
+      "attributes": {
+        "publishOn": "2026-09-01T12:00:00-04:00",
+        "title": "What Apple's Event Means For Suppliers"
+      },
+      "relationships": {
+        "author": { "data": { "id": "70001", "type": "author" } },
+        "sentiments": { "data": [] },
+        "primaryTickers": { "data": [{ "id": "146", "type": "tag" }] }
+      }
+    }
+  ],
+  "included": [
+    {
+      "id": "146",
+      "type": "tag",
+      "attributes": { "slug": "aapl", "name": "AAPL", "company": "Apple Inc." }
+    },
+    {
+      "id": "1150",
+      "type": "tag",
+      "attributes": {
+        "slug": "msft",
+        "name": "MSFT",
+        "company": "Microsoft Corporation"
+      }
+    },
+    {
+      "id": "51234",
+      "type": "author",
+      "attributes": {
+        "nick": "Quality Compounder",
+        "slug": "quality-compounder"
+      }
+    },
+    {
+      "id": "60001",
+      "type": "author",
+      "attributes": { "nick": "Value Skeptic", "slug": "value-skeptic" }
+    },
+    {
+      "id": "70001",
+      "type": "author",
+      "attributes": {
+        "nick": "Supply Chain Notes",
+        "slug": "supply-chain-notes"
+      }
+    },
+    {
+      "id": "900001",
+      "type": "sentiment",
+      "attributes": {
+        "type": "bullish",
+        "articleId": 4701001,
+        "createdAt": "2026-09-15T08:30:00-04:00"
+      }
+    },
+    {
+      "id": "900005",
+      "type": "sentiment",
+      "attributes": { "type": "very_bearish", "articleId": 4700500 }
+    },
+    {
+      "id": "900010",
+      "type": "sentiment",
+      "attributes": {
+        "type": "very_bullish",
+        "articleId": 4700400,
+        "tagId": 146
+      }
+    },
+    {
+      "id": "900011",
+      "type": "sentiment",
+      "attributes": { "type": "neutral", "articleId": 4700400, "tagId": 1150 }
+    },
+    {
+      "id": "900020",
+      "type": "sentiment",
+      "attributes": { "type": "bullish", "articleId": 4700300 }
+    }
+  ],
+  "meta": { "page": { "size": 20, "totalPages": 1 } }
+}

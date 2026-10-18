@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Hindsight: an H whose crossbar is a price line, ending on the call. -->
+  <rect width="128" height="128" rx="30" fill="#14120e"/>
+  <path d="M31 28 V100 M97 28 V100" stroke="#e9e1d2" stroke-width="19" stroke-linecap="round"/>
+  <path d="M40 79 L57 61 L69 72 L88 51" fill="none" stroke="#e9e1d2" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="88" cy="51" r="8.5" fill="#5598e7" stroke="#14120e" stroke-width="3"/>
+</svg>

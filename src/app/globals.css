@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+
+/*
+ * The palette of cezargrigore.com: ink type on a warm bone ground. Data sits
+ * on paper planes, a lighter bone, so tables and charts read cleanly.
+ *
+ * Text uses four tiers and never a fifth (contrast measured on bone):
+ *   text-ink       14.4:1  primary
+ *   text-ink/75     7.3:1  secondary
+ *   text-ink/65     5.2:1  muted: labels, captions, descriptions
+ *   text-ink/40     2.5:1  faint: placeholders, empty cells, separators only
+ */
+@theme {
+  --color-ink: #14120e;
+  --color-bone: #e9e1d2;
+  --color-paper: #f7f3ec;
+
+  /*
+   * Ratings: a diverging scale, blue for bullish, red for bearish, a warm
+   * gray hold between. Validated with the dataviz palette checker on paper
+   * (colorblind safe across all pairs). The light steps sit below 3:1, so a
+   * rating always shows its label and an up or down marker too.
+   */
+  --color-rating-strong-buy: #1c5cab;
+  --color-rating-buy: #5598e7;
+  --color-rating-hold: #6f6a61;
+  --color-rating-sell: #e0705f;
+  --color-rating-strong-sell: #a82820;
+}
+
+@theme inline {
+  --font-serif: var(--font-fraunces), 'Iowan Old Style', Georgia, serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-variation-settings:
+    'SOFT' 30,
+    'WONK' 0;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-ink) 14%, transparent);
+}

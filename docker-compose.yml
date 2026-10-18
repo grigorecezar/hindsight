@@ -1,0 +1,22 @@
+name: hindsight
+
+services:
+  postgres:
+    container_name: hindsight-postgres
+    image: postgres:18
+    restart: always
+    environment:
+      POSTGRES_USER: 'hindsight'
+      POSTGRES_PASSWORD: 'hindsight'
+      # Must match the database in DATABASE_URL, or a fresh volume boots a
+      # server without the app database.
+      POSTGRES_DB: 'local_hindsight'
+    ports:
+      # host 5438 -> container 5432 (5432 to 5437 are taken by other local
+      # projects)
+      - '5438:5432'
+    volumes:
+      - postgres-data:/var/lib/postgresql
+
+volumes:
+  postgres-data:

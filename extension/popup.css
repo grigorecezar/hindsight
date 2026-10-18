@@ -1,0 +1,163 @@
+/* Hindsight's palette: ink on bone, paper planes, four text tiers. */
+:root {
+  --ink: #14120e;
+  --bone: #e9e1d2;
+  --paper: #f7f3ec;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  padding: 16px;
+  background: var(--bone);
+  color: var(--ink);
+  font:
+    13px/1.5 ui-sans-serif,
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font:
+    500 18px/1 'Iowan Old Style',
+    Georgia,
+    serif;
+  letter-spacing: -0.01em;
+}
+
+.wordmark span,
+.quiet {
+  color: color-mix(in srgb, var(--ink) 40%, transparent);
+}
+
+.quiet {
+  text-decoration: none;
+}
+
+.quiet:hover {
+  color: var(--ink);
+}
+
+.status {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 10%, transparent);
+}
+
+.status p {
+  margin: 0;
+}
+
+#status-message {
+  font-weight: 500;
+}
+
+.muted {
+  color: color-mix(in srgb, var(--ink) 65%, transparent);
+}
+
+.status .muted {
+  margin-top: 4px;
+}
+
+.progress {
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: color-mix(in srgb, var(--ink) 10%, transparent);
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--ink);
+  transition: width 0.3s;
+}
+
+button {
+  width: 100%;
+  height: 36px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+button.secondary {
+  margin-top: 8px;
+  background: transparent;
+  color: var(--ink);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 25%, transparent);
+}
+
+.note {
+  margin: 8px 0 12px;
+  font-size: 12px;
+}
+
+details {
+  border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent);
+  padding-top: 10px;
+}
+
+summary {
+  cursor: pointer;
+  color: color-mix(in srgb, var(--ink) 75%, transparent);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: color-mix(in srgb, var(--ink) 75%, transparent);
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 32px;
+  margin-top: 4px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 15%, transparent);
+}
+
+input:focus {
+  outline: 2px solid color-mix(in srgb, var(--ink) 60%, transparent);
+}
+
+#settings-message {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
